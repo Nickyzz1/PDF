@@ -1,0 +1,73 @@
+1 - Atribuição por valor: É como copiar um número de uma folha para outra. Se você mudar o número na segunda folha, não afeta o número na primeira.
+Exemplo:
+
+int a = 5;
+int b = a; //b recebe uma cópia do valor de a
+b = 10; //mudando b não afeta a
+
+O a continua sendo 5 e o b agora é 10
+
+Atribuição por referência: É como dar o mesmo endereço para duas pessoas. Se uma pessoa muda a cor da casa no endereço, a outra pessoa verá essa mudança, porque elas estão apontando para a mesma casa.
+Exemplo:
+
+class Casa {
+	String cor;
+
+	Casa(String cor) {
+		this.cor = cor;
+	}
+}
+
+// Na main
+
+Casa casa1 = new Casa("Azul");
+Casa casa2 = casa1; //A casa2 aponta para a mesma casa que casa1
+casa2.cor = "verde" //Se mudar a cor pela casa2, também afeta a casa1
+
+
+2 - O código gerará um erro, pois o loop está tentando acessar índices que ainda não foram definidos, ele já começa em uma posição do vetor que não tem nada, só foram definidos valores para as posições 0 e 1.
+
+4 - O encapsulamento é muito útil na POO, ele oculta os detalhes internos de uma classe.
+Exemplo:
+
+public class Carro {
+	private String marca;
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+Esses métodos acima são utilizados para acessar e modificar a variável privada, impedindo que o programador cometa algum erro utilizando carro.marca = "alguma coisa", ele necessáriamente precisa usar o método set.
+
+5 - Em java, herança é algo fundamental, ela permite que uma classe herde atributos e métodos de outra classe.
+Exemplo:
+
+//Na classe pai
+public class Animal {
+	String nome;
+
+	public Animal(String nome) {
+		this.nome = nome;
+	}
+
+	public void som() {
+		System.out.println("Algum som");
+	}
+}
+
+//Na classe filha
+public class Cachorro extends Animal {
+
+	public Cachorro(String nome) {
+		super(nome);
+	}
+
+@Override
+	public void som() {
+		System.out.println("AU AU");
+	}
+}

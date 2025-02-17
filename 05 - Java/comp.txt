@@ -1,0 +1,56 @@
+Compreender como se dá Saída de Dados com os Tipos de Print
+Compreender os tipos de Dados Primitivos(byte, short, int, long, float, double, char, booleans)
+Compreender o conceito de String
+Operadores Aritiméticos
+Operações de Potencia e Raiz com a classe Math
+Compreender o conceito de métodos de uma String
+Compreender o funcionamento da Classe Scanner e seus métodos next...
+Aplicar os 6 tipos de operadores relacionais ( ==, !=, >, >=, <,<=)
+Aplicar os 3 tipos de operadores lógicos basicos (and, or e not)
+Aplicar o operador ternario
+Compreender Inferencia de Tipos
+Utilizar o método equals na comparação de objetos
+Utilizar os operadores de incremento e decremento
+Utilizar o comando condicional if
+Utilizar comando condicional else -if
+Compreender a diferença entre dois comandos if em sequencia e o um comando if seguido de um else if
+Utiliza o comando else
+Conversão de tipos Implicita
+Conversão de tipos Explicita
+Conversão de String -> Tipos Primitivios, Tipos Primitivos String
+Compreender a sintaxe de um laço de repetição for,start, stop ,step
+Compreender o funcionamento de um laço de repetição while
+Entender as condições lógicas de inicio e parada de um laço de repetição
+Compreender o funcionamento de um laço de repetição  do while
+Entender o funcionamento e as condições de um comando break em um laço de repetição
+Entender o funcionamento e as condições de um comando continue em um laço de repetição
+Compreende a utilização do comando try catch finally
+Compreende a diferença entre as classes Exception, InputMismatchException, NumberFormatException
+Compreende a utilização do comando Switch Case
+Compreender o que é uma classe
+Compreender a difrença entre classe e objeto
+Compreender que uma classe é composta por atributos e comportamentos
+Representar itens do mundo real como classe de acordo com contexto
+Compreender o conceito de métodos
+Compreender que métodos tipados tem retorno
+Compreender um metodo void e sua utilização
+Comprennder o uso de parametros tipados dentro de um método
+Compreender o uso de um Array Estaticos
+Utilizar um HashSet tipado
+Utilizar um Arraylist tipado
+Utilizar ForEach para acessar atributos de um objeto
+Compreender o conceito de método Construtor
+Comprender a sobrecarga de Construtores com diferentes parametros
+Indicação do objeto atual (this.)
+Compreende o conceito de Métodos Estáticos e Atributos Estáticos (static)
+Atribuição por Valor vs Atribuição por referência
+Comprender o conceito Valor Padrão nos atributos de Classes
+Compreender o conceito de Valor Null
+Relacionamento de Classes - Um para um
+Relacionamento de Classes - Um para muitos
+Relacionamento de Classes - Muitos para muitos
+Compreender o conceito Composição de Classes
+Compreende o conceito de Herança de Classes
+Compreende o conceito de Sobrecarga
+Compreende o conceito de Sobreescrita
+Compreende o conceito e utilização de Enum

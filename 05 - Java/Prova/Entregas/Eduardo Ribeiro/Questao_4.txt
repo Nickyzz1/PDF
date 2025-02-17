@@ -1,0 +1,16 @@
+O encapsulamento funciona através de modificadores, que ditam se um atributo ou método de uma classe são visíveis, no programa todo,
+apenas no pacote em que está a classe, apenas dentro da classe em que foi criado e nas que herdam dela, ou apenas dentro da classe.
+
+    public int a;
+"a" pode ser acessado em qualquer parte do programa.
+
+    int b;
+"b" pode ser acessado em qualquer parte do pacote em que a classe está.
+
+    protected int c;
+"c" pode ser acessado apenas pela propria classe e pelas que herdam dela.
+
+    private int d;
+"d" pode ser acessado apenas pela propria classe.
+
+Para atributos private ou protected, pode ser criado um método public para permitir acesso fora da classe.

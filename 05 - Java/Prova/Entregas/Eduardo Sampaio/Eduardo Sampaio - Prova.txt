@@ -1,0 +1,28 @@
+Questão 1 - Atribuição por valor é uma variável que está alocada diretamente na memória "Stack" ou cache, ou seja, o valor da variável
+é alocado diretamente na memória.
+	Já na atribuição por referência, o valor que é alocado diretamente na memória "Stack" ou cache é um "endereço" para o local
+onde o valor da variável está alocada na memória "Heap".
+
+
+Questão 2 - "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]" - Sequência de Fibonacci;
+
+
+Questão 3 -     
+
+    static boolean Par(int value)
+    {
+        return (value % 2 == 0);
+    }
+
+
+Questão 4 - O conceito de encapsulamento diz respeito as a quem pode visualizar e acessar uma classe 
+	Onde, por exemplo, as classes publicas podem ser visualizadas por todos, as classes privadas não podem ser visualizadas por nenhuma outra, as classes protegidas só pode ser visualizada por suas filhas, entre outros.
+	Um Exemplo: Temos uma classe protegida Casa, Apenas seus filhos quem nesse caso seriam os moradores poderiam acessá-la.
+	Já uma classe Mercado seria publica, pois qualquer Pessoa pode acessá-lo a qualquer momento.
+	E a classe Banco seria privada por poder ser acessada apenas internamente.
+
+
+Questão 5 - Herança se refere a capacidade de classes filhas possuírem os métodos e atributos de uma classe mãe
+	Exemplo: Uma classe mãe Moradia possui os atributos: endereço, num_banheiros, area. E os métodos: abrirPortao(),
+pagarIPTU(), assinarNet(). Ao criar uma classe filha Apartamento todos esses metodos e atributos poderiam ser utilizados 
+na classe filha, claro a depender do encapsulamento.

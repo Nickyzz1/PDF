@@ -1,0 +1,19 @@
+Encapsulamento é um dos pilares do POO e ele é responsavel por mudar o jeito de como acessamos uma variavel dentro do programa, podendo bloquear o acesso ou permitir.
+
+Como exemplo temos o seguinte codigo:
+
+public class Pessoa{
+
+    private int idade;
+    protected String nome;
+    public boolean brasileiro;
+
+}
+
+
+onde o private nao podera ser acessado fora da classe, nem pelos filhos da classe, ele só é acessivel dentro da classe
+o unico jeito de mudar é usando metodos como get e set, para acessar o valor(get)e modificalo (set).
+
+O protected é semelhante, a unica diferença é que qualquer filho de pessoa podera ter acesso a esses atribuitos para mudar.
+
+ja o public seria para indicar que qualquer classe pode acessar e modificar esse valor de fora sem precisar metodos.

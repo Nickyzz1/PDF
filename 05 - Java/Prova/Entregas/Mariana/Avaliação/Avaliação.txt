@@ -1,0 +1,134 @@
+================================================================================================================
+
+Questão 1. No contexto das variáveis na linguagem de programação Java, 
+explique o que é atribuição por valor e atribuição por referência, cite 
+exemplos com variáveis de ambos os casos.
+
+   Atribuição por valor é quando você atribui a uma variável um valor comum.
+   Exemplo: 
+   int a = 5;.
+   Já atribuição por referencia é quando você atribui um endereço de memória á
+   uma variável.
+   Exemplo:
+   int a = 5;
+   int b = a;
+   Agora, se eu manipular a minha variável b, estarem mexendo no valor que seu
+   endereço aponta, que é o a, o que modifica também a variável a.
+
+================================================================================================================
+
+Questão 2. Escreva o que será impresso com o código abaixo
+
+O código vai nos retornar um vetor de 12 posições da seguinte forma:
+{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89}
+
+Como?
+
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] vetor = new int[12]; //declarando o vetor
+        vetor[0] = 0; //atribuindo valor ao index 0 do vetor
+        vetor[1] = 1; //atribuindo valor ao index 1 do vetor
+        for(int i = 2; i<vetor.length;i++){ // percorre o vetor a partir do elemento 2, preenchendo seus indexs.
+            vetor[i] = vetor[i-1]+vetor[i-2]; // condições e preenchimento de index
+        }
+        System.out.println(Arrays.toString(vetor)); //mostra o vetor na tela
+    }
+}
+
+================================================================================================================
+
+Questão 3. Escreva uma função em linguagem de programação Java que recebe como parâmetro um número 
+inteiro positivo e verifica se ele é par ou ímpar. Caso o número seja par ele retorna true e caso 
+seja ímpar retorna false.
+
+//resposta na pasta
+================================================================================================================
+
+Questão 4. Defina o conceito de encapsulamento em linguagem de programação Java. 
+Cite exemplos utilizando variáveis.
+
+   Encapsulamento é a forma com que a variável está disponibilizada para seu código.
+   Temos três tipos de encapsulamentos em Java: Public, Private e Protected.
+   O encapsulamento Public é quando temos uma variável e queremos que ela possa ser
+   ser acessada em todo nosso Package.
+   Por exemplo:
+   public String name = "Mariana";
+   Já o Private, é quando queremos que essa variável possa ser acessada e modificada
+   apenas na Classe em que foi declarada.
+   Por exemplo:
+   private String senha;
+   E o Protected, usamos também para que a variável seja "vista" apenas pela classe
+   em que foi criada, porém, ela também pode ser acessada por suas classes filhas.
+   Por exemplo:
+   protected Integer size = 0;
+
+================================================================================================================
+
+Questão 5. Defina o conceito de herança em linguagem de programação Java. Cite exemplos utilizando classes
+
+   Herança refere-se a quando temos uma classe pai, que possui atributos e métodos, e possuímos também
+   Classes filhas, que herdam esses atributos e métodos da classe pai.
+   Por exemplo, podemos ter uma 'class Animal{...}' que possui o atributo 'public int patas = 4;' e o método
+   'Comer(){...}', pois todos os animais comem. Aí criamos uma classe filho a partir dessa classe pai, por
+   exemplo, 'class Cachorro{...}', que herdará os atributos e métodos da classe pai, ou seja, cachorro tem
+   4 patas e pode comer. E podemos adicionar novos métodos e atributos a classe Cachorro, por exemplo
+   'public String nome;' e 'Latir(){...}'. Agora o cachorro também tem um nome e pode latir, o que não
+   interfere no corpo da classe pai ou de outros filhos dessa mesma classe pai.
+
+================================================================================================================
+
+Questão 6. Implemente uma classe para representar um conjunto matemático de números, abstrata chamada Set. 
+Ou seja, o objeto da classe deve ser capaz de apontar quando um elemento está dentro de si ou não. Ou seja, 
+implementar a seguinte função:
+• contains(Float), que diz se um elemento pertence ao conjunto;
+Para esse desafio você implementará duas classes filhas de Set, a classe NumberSet usando um HashSet<Double> 
+e a IntersectionSet que possui 2 Sets internos. Um conjunto intersecção possui um elemento se os dois conjuntos 
+internos possuírem o elemento.
+Adicionalmente, crie a função estática intersect(Set, Set) em uma classe chamada Sets (no plural) que retorna 
+um IntersectionSet.
+
+//resposta na pasta
+================================================================================================================
+
+Questão 7. Você deseja calcular o valor de PI, então é dito a você que você pode calcular este valor usando a 
+classe Random que pode ser usada da seguinte forma:
+
+import java.util.Random;
+public class Main
+{
+	public static void main(String[] args)
+	{
+		var rand = new Random();
+		var value = rand.nextFloat(); // retorna valor aleatório entre 0 e 1
+	}
+}
+
+Para que você possa aproximar PI é dito que você só precisa sortear pontos aleatórios em um quadrado de tamanho 1x1. 
+Para fazer isso basta sortear um valor para x e para y. Então teste quantos destes pontos estão dentro do quarto de 
+círculo unitário dentro do quadrado, ou seja, quantos pontos (x, y) atendem a condição: √𝑥2+𝑦2<1.
+Após isso, basta multiplicar o resultado por 4 e printar e você terá PI.
+
+Use o Scanner para pedir ao usuário quantos pontos você irá usar para realizar a simulação. 
+Lembre-se de usar try-catch para impedir exceções do tipo NumberFormat e InputMismatch.
+
+//resposta na pasta
+================================================================================================================
+
+
+Questão 8. Abstraia um Trem usando orientação a objetos em Java. Cada trem possui uma ligação com o primeiro vagão 
+e cada vagão deve possuir uma ligação com o vagão anterior e o próximo vagão. Um vagão pode não ter um próximo vagão 
+e deve receber o valor Null na sua ligação. Para o conteúdo do vagão utilize um Enum chamado TrainContent para as 
+possibilidades de: Vazio, Combustível, Trigo, Animais ou Passageiros. Além disso, o trem deve possuir as seguintes funções:
+• count(TrainContent): Conta quantos vagões possuem um determinado conteúdo retornando um inteiro.
+• Add(TrainContent): Adiciona um vagão com um conteúdo específico.
+Você não deve usa uma lista ou um vetor, mas sim relacionar cada objeto da classe vagão.
+
+//resposta na pasta
+================================================================================================================
+
+
+
+boa correção :b

@@ -1,0 +1,3 @@
+Herança é quando quero que uma classe tenha as funções ou variaveis que outra classe ja tem;
+exemplo tenha a classe veiculos que tem informações gerais de um veiculo possa fazer a classe carro herdar de veiculo e adicionar novas variaveis
+ou funções e ainda ter as que ja existem na classe veiculos;

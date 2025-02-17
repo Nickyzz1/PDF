@@ -1,0 +1,20 @@
+QUESTÃO 1: 
+	uma atibuição por valor seria definir direitamente seu tipo dentro da variável, exemplo: "int numero = 10;". Atribuição por referência seria colocar uma
+um endereço dentro da variável que retornaria um valor, exemplo: " int numero = algumaClasse.algumAtributo();" <>  "int numero = this.idade();".
+
+QUESTÃO 2:
+	Vai imprimir um vetor onde cada casa apartir do indice 2 vai ser a soma dos dois últimos indices. 
+
+QUESTÃO 4:
+	O encapsulamento é a capacidade de várias classe diferentes terem a mesma "interface" com compartamentos diferentes.
+	Por exemplo, temos uma classe chamada Pet e nessa classe tem funções como: FazerSom, Correr, etc. Mas existem outras duas classes que herdam a
+classe Per chamadas Cão e Gato, essas classe são obrigadas a terem as funções de Pet, mas, cada um tem um comportamento diferente. Por exemplo, quando
+chamada na classe Cão função FazerSom printaria "auau" e a mesma na classe Gato printaria "miau".
+
+QUESTÃO 5: 
+	Herança é a capacidade de uma classe herdar características de uma classe Mãe.
+	Por exemplo, temos uma classe chamda SerHumano e nela temos parâmetro como idade, nome, cpf e endereço. E temos a classe chamada Pessoa1 que
+herda SerHumano, então, obrigatóriamente a classe Pessoa1 tem que definir as condições de SerHumano, como: "serhuamno.idade = 18;", "serhumano.nome = "Helena"",etc. 
+
+
+

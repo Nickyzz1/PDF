@@ -1,0 +1,9 @@
+A atribuição por valor é feita quando se copia o valor de uma variável na outra, que normalmente é feito em tipos primitivos.
+Já a atribuição por referência dá a variável o endereço de memória de outra, assim, toda modificação feita na referência será
+refletida na original. A atribuição por referência é feita entre objetos.
+
+Deste modo, em
+    int x = y;
+a atribuição é feita por valor, e em
+    Pessoa P1 = P2;
+é feita por referência.

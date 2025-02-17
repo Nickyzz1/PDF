@@ -1,0 +1,23 @@
+Herança é quando existe uma classe pai e uma filha,
+a classe filha vai herdar tudo que estiver na pai.
+Além disso, a classe pai pode ser abstrata, dessa
+maneira a filha herda mas pode alterar o que herdou.
+
+Exemplo:
+
+public class Pai {
+
+    public void metodo1() {
+
+    }
+
+    public void metodo2() {
+
+    }
+}
+
+-------------------------
+
+public class Filha extends Pai{
+
+}

@@ -1,0 +1,30 @@
+Na Orientação a Objetos, uma classe pode herdar de outra, recebendo todos os atributos e métodos da classe pai,
+podendo adicionar mais atributos e métodos além dos herdados, e mudar o comportamento de métodos herdados. Em Java,
+uma classe só pode herdar de uma outra classe. Exixtem, porém, as interfaces, que permitem que várias sejam implementadas
+na mesma classe. A classe filha pode acessar diretamente a classe pai usando super.
+
+    public class Pai
+    {
+        int i;
+        public Pai(int i)
+        {
+            this.i = i;
+        }
+        int get()
+        {
+            return i + 1;
+        }
+    }
+
+    public class Filho extends Pai // Sintaxe que indica a herança
+    {
+        public Filho(int i)
+        {
+            super(i); // chama o construtor da classe Pai
+        }
+        @Override // Anotação para sobrescrever o metodo get
+        int get()
+        {
+            return i + 2;
+        }
+    }

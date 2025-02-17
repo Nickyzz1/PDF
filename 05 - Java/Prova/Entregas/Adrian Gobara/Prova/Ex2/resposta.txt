@@ -1,0 +1,6 @@
+Resposta: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+O código imprimiu isso, porque ele declara apenas os numeros
+da posição 0 (0) e da posição 1 (1), depois disso no for
+é declarado os outros números, que são a soma do último e
+penúltimo.

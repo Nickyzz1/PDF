@@ -1,0 +1,10 @@
+Atribuição por valor:
+ É quando você atribui um valor a uma variavel
+
+int a = 1;
+
+Atribuição por referência:
+ É quando você atribui a referência de uma variavel para a outra:
+
+int a = 1;
+int b = a;

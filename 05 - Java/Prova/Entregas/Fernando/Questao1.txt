@@ -1,0 +1,2 @@
+A atribuição por valor é feita quando se atribui diretamente um valor a uma variavel como por exemplo os tipos int e float;
+Atribuição por referencia é feita qundo se guarda um ponteiro em uma variavel que faz uma referencia ao valor desejado que se encontra em outro lugar da memoria, como por exemplo Integer e String;

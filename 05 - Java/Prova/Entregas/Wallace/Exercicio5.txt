@@ -1,0 +1,53 @@
+A herança também é um dos pilares de POO e ela será responsavel por transmitir metodos e atributos de uma classe(tambem chamada de classe pai) para a outra(tambem chamada de classe filha).
+
+como exemplo temos o seguinte codigo:
+
+public class Pessoa{
+
+    private int idade;
+    private String nome;
+    private boolean brasileiro;
+
+
+        public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public boolean isBrasileiro() {
+        return brasileiro;
+    }
+
+    public void setBrasileiro(boolean brasileiro) {
+        this.brasileiro = brasileiro;
+    }
+
+    public void fala(String fala)
+    {
+        System.out.println(fala);
+    }
+
+}
+
+public class Aluno extends Pessoa
+{
+
+    Aluno(int idade,String nome, boolean éBrasileiro)
+    {
+        setNome(nome)
+        setIdade(idade)
+        setBrasileiro(éBrasileiro)
+    }
+
+    fala("ola")
+}
+
+
+onde a classe aluno esta herdando os atributos de pessoa(nome, idade e se é brasileiro) e seus metodos(get,set e fala);

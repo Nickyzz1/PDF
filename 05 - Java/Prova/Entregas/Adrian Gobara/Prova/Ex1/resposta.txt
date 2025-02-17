@@ -1,0 +1,18 @@
+A atribuição por valor em uma variável é a partir do valor que você da patra ela,
+como int, String, float. A atribuição por referência a variável recebe um valor
+a partir de outro lugar referenciando seu ugar de origem.
+
+Exemplo: 
+
+class Main {
+    public static void main(String[] args) {
+        int a;
+        String b;
+        boolean c;
+    }
+}
+-----------------------------------
+
+public class Exemplo {
+    Exemplo ex;
+}

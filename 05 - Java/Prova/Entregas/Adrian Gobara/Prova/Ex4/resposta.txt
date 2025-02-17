@@ -1,0 +1,14 @@
+Encapsulamento = Forma de definir a variável ou classe, como deixar privado, publico ou protected.
+Dessa maneira podemos controlar melhor as interações das variáveis.
+
+privado só pode ser acessado na mesma classe.
+publico pode ser acessado por qualquer um.
+protected não fica privado apenas protegido.
+
+Exemplo:
+
+public class Exemplo {
+    private int a;
+    public int b;
+    protected int c;
+}

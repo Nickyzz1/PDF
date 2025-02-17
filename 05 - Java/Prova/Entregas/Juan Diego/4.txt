@@ -1,0 +1,3 @@
+Encapsulamento tem com objetivo definir quais funções ou variaveis da minha classe devem ser somente vista e modificadas dentro da classe ou 
+fora dela exemplo crio um variavel "private int size" essa variavel só pode ser acessada dentro da minha classe e modificada dentro dela
+caso queira que possa ser visualizada fora dela tenho que criar um getSize() ou caso queira mudar fora da classe seria necessario um setSize();

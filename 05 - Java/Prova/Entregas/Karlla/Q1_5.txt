@@ -1,0 +1,248 @@
+Questão 1. No contexto das variáveis na linguagem de programação Java, explique o que é atribuição por valor e atribuição por referência, cite exemplos com variáveis de ambos os casos.
+resposta: 
+Atribuição valor: quando uma cópia do valor de uma variável é criada e atribuida a uma outra variável. Por exemplo os tipos int, boolean, long, short, byte etc. 
+Atribuição referência: sã os ponteiros, onde uma variável não possui um valor exato e sim o endereço de memória de outra variável ou objeto.
+
+Questão 2. Escreva o que será impresso com o código abaixo.
+resposta: 
+Esse código imprime uma Array de números transformada em string no seguinte formato e com os valores [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89] sendo nesse caso a posição i recebendo o valor da soma das duas posições que estavam antes. Por exemplo a posição 6 (8) = posição 4 (3) + posição 5 (5)
+
+Questão 3. Escreva uma função em linguagem de programação java que recebe como parâmetro um número inteiro positivo e verifica se ela é par ou impar. Caso o número seja par ele retorna true e caso seja impar retorna false.
+resposta: 
+import java.util.Scanner;
+
+class Main 
+{
+  public static void main(String[] args) 
+  {
+    Scanner sc = new Scanner(System.in);
+    boolean isEven;
+    System.out.println("Enter a number: ");
+    int num = sc.nextInt();
+    if (num % 2 == 0) 
+    {
+      isEven = true;
+    } else {
+      isEven = false;
+    }
+    System.out.println("Is the number even? " + isEven);
+  }
+}
+
+Questão 4. Defina o conceito de encapsulamento em linguagem de programação java. Cite exemplos utilizando variáveis.
+resposta: 
+Em java, encapsulamento é a prática de esconder e privar varáveis e objetos, permitindo assim o controle de visibilidade e manipulação desses elementos. Por exemplo:  
+-public int number que é uma variável do tipo inteiro porem qualquer obejto e classe tem acesso ao seu valor, pois ela é pública.
+-private boolean isOdd que é uma variável do tipo booleana privada, onde apenas a própria classe pode acessar e alterar o seu conteúdo.
+
+Questão 5. Defina o conceito de herança em linguagem de programação java. Cite exemplos utilizando classes.
+resposta: 
+Possibilidade de criar novas classes e objetos pertencentes a uma classe maior que chamamos de "classe mãe". Onde uma classe filha herda todos os atributos e métodos de sua classe mãe e ainda pode possuir os seus próprios.
+Por exemplo, uma classe chamada "F1" que possui os atributos: rodas, motor, potencia, cavalos, design.
+E uma classe filha chamada "RedBull" que possui todos os atributos da classe F1, pois também faz parte, só que possui atributos a mais que são só seus, por exemplo: quantidade de problemas, tempo de curva, tempo da volta, etc..
+
+Questão 6.
+IntersectionSet:
+public class IntersectionSet extends Set
+{
+  public NunberSet setA;
+  public NunberSet setB;
+  public IntersectionSet (NumberSet setA, NunberSet setB)
+  {
+    this.setA = setA;
+    this.setB = setB;
+  }
+  public boolean contains(double value)
+  {
+    return setA.contains(value)&& setB.contains(value);
+  }
+}
+
+main:
+class Main 
+{
+  public static void main(String[] args) 
+  {
+    NumberSet setA = new NumberSet(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    NumberSet setB = new NumberSet(2, 4, 6, 8, 10, 12, 14, 16);
+    Sets sets = new Sets(setA, setB);
+    IntersectionSet intersection = sets.intersect(setA, setB);
+    System.out.println(intersection.contains(16));
+  }
+}
+
+nunberSet:
+import java.util.HashSet;
+
+public class NumberSet extends Set 
+{
+  HashSet<Double> numbers=new HashSet<Double>();
+  public NumberSet(double... numbers)
+  {
+    for(double number:numbers)
+    {
+      this.numbers.add(number);
+    }
+  }
+  public boolean contains(double value)
+  {
+    return numbers.contains(value);
+  }
+}
+
+Set:
+public abstract class Set 
+{
+  public abstract boolean contains(double value);
+}
+
+Sets:
+public class Sets
+{
+  public NumberSet setA;
+  public NumberSet setB;
+
+  public Sets(NumberSet setA, NumberSet setB)
+  {
+    this.setA = setA;
+    this.setB = setB;
+  }
+  public static IntersectionSet intersect(NumberSet setA, NumberSet setB)
+  {
+    return new IntersectionSet(setA, setB);
+  }
+}
+
+Questão 7.
+Main:
+import java.util.Random;
+import java.util.Scanner;
+import java.lang.Math;
+import java.util.InputMismatchException;
+
+class Main 
+{
+  public static void main(String[] args) 
+  {
+    var rand=new Random();
+    var scanner = new Scanner(System.in);
+    int counter = 0;
+    try
+    {
+      System.out.println("Enter the number of dots: ");
+      int dotsNum = scanner.nextInt();
+      for (int k = 0; k < dotsNum; k++) 
+      {
+        var x = rand.nextFloat();
+        var y = rand.nextFloat();
+        if (Math.sqrt((x*x)+(y*y)) < 1) 
+        {
+          counter++;
+        }
+      }
+      System.out.println("The number of dots in the circle is: " + counter);
+      System.out.println("The value of pi is: " + (4.0*counter/dotsNum));
+    } catch (NumberFormatException e) 
+    {
+      System.out.println("Invalid input");
+    } catch (InputMismatchException e) 
+    {
+      System.out.println("Invalid input");
+    } finaly 
+    {
+      scanner.close();
+    }
+  }
+}
+
+Questão 8.
+Main:
+class Main 
+{
+  public static void main(String[] args) 
+  {
+    Train train = new Train();
+    train.addWagon(TrainContent.FUEL);
+    train.addWagon(TrainContent.EMPTY);
+    train.addWagon(TrainContent.ANIMALS);
+    train.addWagon(TrainContent.ANIMALS);
+    train.addWagon(TrainContent.ANIMALS);
+    train.addWagon(TrainContent.WHEAT);
+    train.addWagon(TrainContent.WHEAT);
+    train.addWagon(TrainContent.WHEAT);
+    train.addWagon(TrainContent.FUEL);
+    train.addWagon(TrainContent.FUEL);
+    train.addWagon(TrainContent.EMPTY);
+    train.addWagon(TrainContent.PASSENGERS);
+    train.addWagon(TrainContent.PASSENGERS);
+    train.addWagon(TrainContent.PASSENGERS);
+    train.addWagon(TrainContent.PASSENGERS);
+    System.out.println(train.count(TrainContent.FUEL));
+    System.out.println(train.count(TrainContent.WHEAT));
+    System.out.println(train.count(TrainContent.EMPTY));
+    System.out.println(train.count(TrainContent.ANIMALS));
+    System.out.println(train.count(TrainContent.PASSENGERS));
+  }
+}
+
+Train:
+public class Train
+{
+  public Wagon firstWagon;
+  public Wagon lastWagon = firstWagon;
+  public int numWagons;
+
+  public Train() 
+  {
+    this.firstWagon = null;
+    this.numWagons = 0;
+  }
+
+  public int count(TrainContent content) 
+  {
+    int count = 0;
+    Wagon currentWagon = firstWagon;
+    while (currentWagon != null) 
+    {
+      if (currentWagon.content == content) 
+      {
+        count++;
+      }
+      currentWagon = currentWagon.nextWagon;
+    }
+    return count;
+  }
+
+  public void addWagon(TrainContent content) 
+  {
+    Wagon newWagon = new Wagon(content);
+    if (numWagons == 0) 
+    {
+      firstWagon = newWagon;
+    } else 
+    {
+      lastWagon.nextWagon = newWagon;
+      newWagon.previousWagon = lastWagon;
+    }
+    lastWagon = newWagon;
+    numWagons++;
+  }
+}
+
+TrainContent:
+public enum TrainContent
+{
+  FUEL, WHEAT, PASSENGERS, EMPTY, ANIMALS;
+}
+
+Wagon:
+public class Wagon
+{
+  public TrainContent content;
+  public Wagon nextWagon;
+  public Wagon previousWagon;
+  public Wagon(TrainContent content) 
+{
+    this.content = content;
+  }
+}

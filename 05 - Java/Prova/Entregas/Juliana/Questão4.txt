@@ -1,0 +1,13 @@
+Encapsulamento é como uma objeto poderá ser acessado em outras classes
+
+Public: Todas as classes poderam acessar essa variavel:
+
+ > public int a = 0;
+
+Private: Os filhos da classe só conseguem acessar com get e set:
+
+> private int a = 0;
+
+Protected: Somente os filhos da classe podem acessar o valor;
+
+> protected int = 0;

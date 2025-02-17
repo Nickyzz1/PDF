@@ -1,0 +1,3 @@
+O encapsulamento acontece quando se dejesa restringir o acesso de uma variavel,
+por exemplo a declaração de variavel "private int num;" está encapsulada para que apenas a classe onde foi declarada tenha acesso a ela, 
+a declaração de variavel "protected int num;" tambem esta encapsulada, mas agora a classe declaradora e suas classes filhas possuem acesso a essa variavel;

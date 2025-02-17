@@ -1,0 +1,12 @@
+Uma variável com atribuição por valor recebe é declarada da seguinte forma:
+
+int num;
+
+Declarando a variável dessa forma, caso não seja atribuido nenhum valor a ela, a variável irá retornar "0".
+
+Uma variável com atribuição por referência seria declarada da seguinta forma:
+
+Integer num;
+
+Esta variável recebe de uma classe chamda "Integer", caso não seja atribuido algum valor a essa variável declarada dessa forma, ela retornará "null".
+

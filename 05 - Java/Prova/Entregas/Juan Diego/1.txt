@@ -1,0 +1,2 @@
+Por valor são os tipos de variaves mais antigas como Int,Float,Char etc;
+As por referêcia é como Ponteiro,ele altera uma variavel atraves do endereço dela

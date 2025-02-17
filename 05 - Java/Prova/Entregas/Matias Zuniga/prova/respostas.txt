@@ -1,0 +1,17 @@
+1 - Quando voce atribui o valor de uma variavel a um tipo primitivo (como "int" por exemplo) você está fazendo uma atribuição por valor. Tal atribuição não tem metodos dentro, pelo fato de ser "apenas" um tipo primitivo.
+ Atribuição por referência acontece quando você atribui uma variável a uma classe, criando assim um objeto, por isso, a variável que foi implementada possui métodos dentro dela, como por exemplo "Integer".
+Inclusive, essa é a principal diferença entre int e Integer no java, integer é apenas um tipo primitivo, já Integer é ua classe que possui métodos já atribuidos a ela.
+
+
+2 - Será impresso: 0  1  1  2  3  5  8  13  21  34  55  89. Que, inclusive, é a sequência de fibonacci.
+
+
+4 - Encapsulamento pode se entender como que elementos do programa vão ter acesso a certo atributo ou método de uma certa classe. Por exemplo, se em uma classe eu defino que o atributo "numero" é public, todas as outras
+classes irão ter acesso e poderão modificar tal atributo, se ele for protected, apenas as classes que herdam dessa classe mãe terão acesso a tal atributo, e se o atributo for private apenas a classe mãe pode ter acesso.
+
+
+5 - Herança é um conceito extremamente importante em POO. Se trata de ter uma classe "mãe" que possui certos atributos ou métodos e uma ou mais classes filhas, que, dependendo ou não, terão acesso esses métodos e atributos.
+Por exemplo, vamos supor que existe uma classe Pessoa, que possui certos atributos como nome, peso, altura, e métodos como comer e falar. Agora vamos criar outra classe, que vai herdar de Pessoa (ou ser filha de Pessoa) chamada
+Jogador. A classe jogador também vai herdar os atributos(nome, peso altura) e metodos(comer e falar) de Pessoa, mais também terá outros atributos como gols, assitencias e outros métodos como chutar e passarABola. Como dito anteriormente,
+os métodos e atributos da classe mãe serão herdados para a classe filha, porém os métodos a tributos da classe filha não poderão ser acessados ou modificados pela classe mãe, neste caso Pessoa.
+

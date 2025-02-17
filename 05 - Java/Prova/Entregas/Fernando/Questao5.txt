@@ -1,0 +1,3 @@
+A herança em java ocorre quando se cria uma classe mãe que possuirá seus próprios atributos e métodos, como por exemplo "class Questao5", 
+e após isso se cria uma ou mais outras classes que herdam a classe mãe, 
+essas classes filhas possuem todos os métodos e atributos da classe mãe e podem criar novos ou reescrever os existentes, como por exemplo "class Filha extends Questao5";

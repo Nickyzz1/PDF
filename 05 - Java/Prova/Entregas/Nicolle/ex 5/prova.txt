@@ -1,0 +1,66 @@
+1 - variáveis por atribuição são variáveis que de tipo primitivo e variáveis por referência são variáveis de tipo não primitivo: Ex: String name = "Trevis", como a String em java é uma classe então é uma variável por referência, outrossim, int number = 1; é uma variável por atricuição, pois int é um tipo primitivo;
+
+
+4 - encapsulamento é quando o dev privatiza a variável, por exemplo:
+private String name;
+private String data;
+private String cpf;
+A var privatizada só pode ser acessada ou mudada a partir dos getters e setters, iksso é o encapsulamento.
+
+5 - heraça é quando uma classe filha herda métodos de uma classe pai.ex:
+
+public class Employee{
+
+	String name;
+	int age;
+
+	Employee(String name, int age)
+	{
+		this.name = name;
+		this.age = age;
+	}
+
+	void display(Manager employee)
+	{
+		System.out.println(employee.name);
+		System.out.println(employee.age);
+	}
+}
+//class filha Manager
+public class Manager extends Employee{
+
+    String name;
+
+    public Manager(String name, int age)
+    {
+        super(name, age);
+    }
+}
+//main
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[])
+    {
+
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a name:");
+        String name = scan.nextLine();
+        System.out.println("Enter a age:");
+        int age = scan.nextInt();
+
+        Manager manager = new Manager(name, age);
+        
+        scan.close();
+    }
+}
+
+
+
+
+
+
+
+
+

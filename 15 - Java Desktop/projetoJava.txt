@@ -1,0 +1,65 @@
+BOSCH OVERFLOW
+
+- Bosch
+- front(html, css, bootstrap, javascript)
+- testes
+- testes de integração (selenium)
+
+ETAPAS
+
+- interface e testes
+- serviços backend(jwt, hash, implementar os serviços e fazer end points, senhas : 12 caracteres, maiúsculas e minúsculas, e número)
+- front end
+- testes de integração, com base no front end testar as coisas
+- integração beck e front
+
+END-POINTS
+
+/auth (login)
+pagina incial : uma barra de pesqusia para ver os espaços
+/spaces (só adm pode adicionar pessoas no espaço, e dar permissao de adm, o priemiro adm é o criador do espaço)
+/permissions: adms podem deletar ou não as perguntas
+/questios
+/answers
+
+// adm é adm do seu espaço
+//quem nn estiver no espaço pode ler a perguntas mas não perguntar nem ler as respostas, quem é dop espaço pode fazer td 
+
+jwt : passar uma lista do id de quais espaços vc é adm
+
+== Descrição dos end-points =========================
+
+- post/user (criar a conta) (pode mandar uma mesagem)
+- get/ user (fazer uma query, paginação, tamanho da página) --> esse get deve achar usários para colocar no seu space, ele ficará, por exemplo, com um botão dentro do seu espaço. Inicilamemnte vc é o adm e não vai ter ninguém adicionado nos eu espaço, esse get permite vc adicionar pessoas: na página de adicionar pessoas todos os users são retornados, quando vc clica no user vai para o end-point /permission
+
+permissões: conceder permisssão de adm e de user em um espaço
+- post/permission : mostra as informações do user que vc vai adc e dois botões: btn 1: adicionar ao espaço, btn 2: promover a adm no seu espaço administrador(obs: se a pessoa já estiver adicionada o botão de adicionar fica preto e branco, se a pessoa nn estiver no seu espaço os dois botões adicionam, mas um adiciona já como adm)
+
+- get/spaces(deve ter uma query com paginação que retorna todos os espaços na página de pesquisa incial, a "home")
+- post/spaces (para criar o seu espaço: outro botão na página inical)
+- delete/spaces (para deletar o seu espaço)
+
+- get/question (query que retorna todas as perguntas)
+- get/question/{idQuestão} vai ver a perguntas específicas e suas respostas
+
+- post/answer
+
+== RESUMO ==========================================
+
+- BOSCH OVERFLOW -
+user/ (cria a conta)
+página incial barra de pesquisa para pesquisar os espaços
+/spaces : mostra todos os espaços e permite criar espaços: todo usuário pode criar um espaço e é o adm desse espaço, permissões validades pelo token:
+adm: criar espaço, adicionar usuários, remover usuários, deletar perguntas, promover usuário a adm, perguntas, responder, ver perguntas
+user membro : perguntar, responder e ler perguntas
+user não membro:apenas ler as perguntas do espaço
+
+== EXTRA ============================================
+
+- fazer classe de mock para testar com dados ficticios e não no banco de dados
+
+só um get permission: space id e user id, prteciso procurar pelo id do usuário no permission para saber qual tipo de poermissão ele tem --> enum  1 user pode responder e perguntar, 2 user adm do espaço 
+
+
+
+

@@ -1,0 +1,344 @@
+1 - variáveis por atribuição são variáveis que de tipo primitivo e variáveis por referência são variáveis de tipo não primitivo: Ex: String name = "Trevis", como a String em java é uma classe então é uma variável por referência, outrossim, int number = 1; é uma variável por atribuição, pois int é um tipo primitivo;
+
+2 - cada item a partir do index 2 seria  asoma dos 2 anteriores, resultando: 0,1,1,2,3,5,8,13,21,34.. --> números da série de fibonnacci; porém eles seriam impressos como string, o que mudaria a resposta, no final, o impressso foi:
+
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
+        at ex2.main(ex2.java:11)
+
+3 -
+
+import java.util.Scanner;
+
+public class Main{
+
+    static void parORImpar(int num)
+    {
+        try{
+
+            boolean result = (num%2 == 0) ? true : false;
+            
+            System.out.println("O numero é: " + result);
+
+        }catch(ArithmeticException e){
+
+            System.out.println("Erro na operação");
+        }
+    } 
+
+    public static void main(String args[]){
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("===========BEM VINDO=============");
+        System.out.println("DIGITE UM NUMERO PARA DESCOBRIR SE É IMPAR OU PAR: ");
+        int num = scan.nextInt();
+
+        parORImpar(num);
+
+        scan.close();
+    }
+    
+}
+
+4 - encapsulamento é quando o dev privatiza a variável, por exemplo:
+private String name;
+private String data;
+private String cpf;
+A var privatizada só pode ser acessada ou mudada a partir dos getters e setters, iksso é o encapsulamento.
+
+5 - heraça é quando uma classe filha herda métodos de uma classe pai.ex:
+
+public class Employee{
+
+	String name;
+	int age;
+
+	Employee(String name, int age)
+	{
+		this.name = name;
+		this.age = age;
+	}
+
+	void display(Manager employee)
+	{
+		System.out.println(employee.name);
+		System.out.println(employee.age);
+	}
+}
+//class filha Manager
+public class Manager extends Employee{
+
+    String name;
+
+    public Manager(String name, int age)
+    {
+        super(name, age);
+    }
+}
+//main
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[])
+    {
+
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a name:");
+        String name = scan.nextLine();
+        System.out.println("Enter a age:");
+        int age = scan.nextInt();
+
+        Manager manager = new Manager(name, age);
+        
+        scan.close();
+    }
+}
+
+6-
+
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    static void createConjuntos(float arrayConjuntos[][], int quantNumbers, int quantConjuntos)
+    {
+        Random rand = new Random();
+        for(int i = 0; i < quantConjuntos; i++)
+        {
+            for(int j = 0; j < quantNumbers; j++)
+            {
+                float value = rand.nextFloat();
+                arrayConjuntos[i][j] = value;
+            }
+        }
+    } 
+    static void display(float arrayConjuntos[][], int quantNumbers, int quantConjuntos)
+    {
+        for(int i = 0; i < quantConjuntos; i++)
+        {
+            for(int j = 0; j < quantNumbers; j++)
+            {
+                System.out.println(arrayConjuntos[i][j]);
+                
+            }
+        }
+    } 
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Digite quantos conjuntos você quer adicionar: ");
+        int quantConjuntos = scan.nextInt();
+        System.out.println("Digite quantos valores tem cada conjunto: ");
+        int quantNumbers = scan.nextInt();
+        
+        Float arrayConjuntos[][] = new Float[quantConjuntos][quantNumbers];
+
+        createConjuntos(arrayConjuntos, quantNumbers, quantConjuntos);
+        display(arrayConjuntos);
+    
+        System.out.println("Digite um numero para saber se ele está no conjunto: ");
+        int num = scan.nextInt();
+
+    }
+    
+}
+
+
+
+8:
+
+//main
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String args[])
+    {
+        Scanner scan = new Scanner(System.in);
+        LinkedList trem = new LinkedList();
+
+        System.out.println("Digite quantos vagoes deseja adicionar");
+        int quant = scan.nextInt();
+        scan.nextLine();
+
+        int fla = 1;
+
+        while(fla == 1)
+        {
+           for(int i = 0; i <quant; i++)
+           {
+            
+            System.out.print("Digite uma opcao para encher cada vagao: vazio, combustivel, trigo, animais, passageiros\n");
+            String content = scan.nextLine();
+
+            trem.addItems(content);
+            trem.count(content);
+
+           }
+           System.out.println("quantos vagoes com cada item: ");
+           trem.displayCount();
+
+           System.out.println("\nORGANIZAÇÃO DOS VAGOES:");
+        
+           trem.display(trem);
+        
+           
+        }
+        
+        scan.close();
+        }
+}
+
+//linkedList
+
+enum TrainContent{
+    vazio, combustivel, trigo, animais, passageiros
+}
+
+public class LinkedList{
+
+    Node head;
+    int quantVazio;
+    int quantCombust;
+    int quantTrigo;
+    int quantAnimais;
+    int quantPassengers;
+
+    void addItems(String item)
+    {
+        Node newNode = new Node(item);
+        if(head == null)
+        {
+            head = newNode;
+        }
+        else
+        {
+            Node temp = head;
+            head = newNode;
+            head.setNext(temp);
+            head.setAnt(temp.getNext());
+
+            // head.setNext(temp.getNext());
+            // head.setAnt(temp);
+
+            //getant head = null
+            //get next tail = null
+        }
+    }
+
+    void display(LinkedList list)
+    {
+        Node current = head;
+        int start = 0;
+
+        while(current != null)
+        {
+            System.out.println("vagao:" + start);
+            System.out.printf("%s \n", current.content);
+            start ++;
+            
+            current = current.getNext();
+        }
+        System.out.println();
+    }
+    void count(String content)
+    {
+        if(content.equals("vazio"))
+        {
+            quantVazio += 1;
+
+        }
+        else if(content.equals("combustivel"))
+        {
+            quantCombust += 1;
+
+        }
+        else if(content.equals("trigo"))
+        {
+            quantTrigo += 1;
+
+        }
+        else if(content.equals("animais"))
+        {
+            quantAnimais += 1;
+
+        }
+        else if(content.equals("passageiros"))
+        {
+            quantPassengers += 1;
+        }
+    }
+
+    void displayCount()
+    {
+        System.out.println("quantidade vagoes vazios: " + quantVazio);
+        System.out.println("quantidade vagoes com combustuivel: " + quantCombust);
+        System.out.println("quantidade vagoes com trigo: " + quantTrigo);
+        System.out.println("quantidade vagoes com animais: " + quantAnimais);
+        System.out.println("quantidade vagoes com passageiros: " + quantPassengers);
+
+    }
+
+    //add
+    //alocar nmemoria para o item
+    //ver se está vazia
+    //adc ao head
+    //mudar o next
+}
+//Node
+
+enum TrainContent{
+    vazio, combustivel, trigo
+}
+
+public class Node {
+
+    String content; //criei um objeto boo
+    private Node next; //criei um next
+    private Node ant; //criei um next
+
+    Node(String content)
+    {
+       this.content = content;
+       next = null;
+       ant = null;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public Node getNext() {
+        return next;
+    }
+
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    public Node getAnt() {
+        return ant;
+    }
+
+    public void setAnt(Node ant) {
+        this.ant = ant;
+    }
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+
+O que sera impresso sera uma soma dos dois anterioes que formaram um novo numero, até atingir o limite da Array
+
+Saida ate atingir o limite: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89;
+como pode ver, 1+2 = 3; 2+3 = 5;3+5 = 8 e assim por diante;
