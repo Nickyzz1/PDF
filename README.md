@@ -11,3 +11,7 @@ https://brandguide.bosch.com/document/598#/standortgestaltung/spezifische-verwen
 Bosch icons
 
 https://brandguide.bosch.com/document/748
+
+Bosch templates
+
+https://brandguide.bosch.com/document/396/en#/templates/overview
